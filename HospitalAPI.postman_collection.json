@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "ac843c5c-5f4b-4441-9438-62340eaa2c39",
+		"_postman_id": "35bba2ad-5724-4a15-87ed-acfaf3ad2fbe",
 		"name": "HospitalAPI",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -52,12 +52,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/doctors/login",
-					"protocol": "http",
+					"raw": "https://hospitalapi-lflw.onrender.com/doctors/login",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"hospitalapi-lflw",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"doctors",
 						"login"
