@@ -10,7 +10,8 @@ app.use(bodyParser.json());
 
 app.use("/", indexRoutes);
 
-const port = 3000;
+const port = 3000 || process.env.port;
+
 app.listen(port,function(err){
     if(err)
         console.log("some error occured while starting the server : "+err.message)
