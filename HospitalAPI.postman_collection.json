@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "ac843c5c-5f4b-4441-9438-62340eaa2c39",
+		"name": "HospitalAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1.register doctor",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"username\": \"doc1\",\n   \"password\": \"doc1@abc\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/doctors/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doctors",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. login doctor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"username\": \"doc1\",\n   \"password\": \"doc1@abc\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/doctors/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doctors",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. register patient",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZGUyN2U3NjBlM2I4Nzk5OThjMjg0NiIsImlhdCI6MTY3NTUwNjMwMiwiZXhwIjoxNjc1NTkyNzAyfQ.SH3iVJHrCbARCUUaHwJNvWA7l8k6xQf_VYEpDEQ3Xv4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"name\": \"pat1\",\n   \"phoneNumber\": 1234567890\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/patients/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"patients",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. create report",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZGUyN2U3NjBlM2I4Nzk5OThjMjg0NiIsImlhdCI6MTY3NTUwNjMwMiwiZXhwIjoxNjc1NTkyNzAyfQ.SH3iVJHrCbARCUUaHwJNvWA7l8k6xQf_VYEpDEQ3Xv4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"status\": \"Positive-Admit\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/patients/63de4a46511b0d1f5a390575/create_report",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"patients",
+						"63de4a46511b0d1f5a390575",
+						"create_report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Get all report by patient id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/patients/63de517fc5533855c3afd17e/all_reports",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"patients",
+						"63de517fc5533855c3afd17e",
+						"all_reports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. Get all Report by status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/reports/Symptoms-Quarantine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reports",
+						"Symptoms-Quarantine"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
