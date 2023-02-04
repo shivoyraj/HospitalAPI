@@ -23,12 +23,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/doctors/register",
-					"protocol": "http",
+					"raw": "https://hospitalapi-lflw.onrender.com/doctors/register",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"hospitalapi-lflw",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"doctors",
 						"register"
@@ -91,12 +92,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/patients/register",
-					"protocol": "http",
+					"raw": "https://hospitalapi-lflw.onrender.com/patients/register",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"hospitalapi-lflw",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"patients",
 						"register"
@@ -126,15 +128,16 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/patients/63de4a46511b0d1f5a390575/create_report",
-					"protocol": "http",
+					"raw": "https://hospitalapi-lflw.onrender.com/patients/63de6a508515eb0eb2823e2f/create_report",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"hospitalapi-lflw",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"patients",
-						"63de4a46511b0d1f5a390575",
+						"63de6a508515eb0eb2823e2f",
 						"create_report"
 					]
 				}
@@ -147,15 +150,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/patients/63de517fc5533855c3afd17e/all_reports",
-					"protocol": "http",
+					"raw": "https://hospitalapi-lflw.onrender.com/63de6a508515eb0eb2823e2f/all_reports",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"hospitalapi-lflw",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
-						"patients",
-						"63de517fc5533855c3afd17e",
+						"63de6a508515eb0eb2823e2f",
 						"all_reports"
 					]
 				}
@@ -168,15 +171,16 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/reports/Symptoms-Quarantine",
-					"protocol": "http",
+					"raw": "https://hospitalapi-lflw.onrender.com/reports/Positive-Admit",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"hospitalapi-lflw",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"reports",
-						"Symptoms-Quarantine"
+						"Positive-Admit"
 					]
 				}
 			},
