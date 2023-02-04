@@ -9,7 +9,7 @@
 			"name": "1.register doctor",
 			"request": {
 				"auth": {
-					"type": "bearer"
+					"type": "noauth"
 				},
 				"method": "POST",
 				"header": [],
@@ -78,7 +78,7 @@
 				"header": [
 					{
 						"key": "x-auth-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZGUyN2U3NjBlM2I4Nzk5OThjMjg0NiIsImlhdCI6MTY3NTUwNjMwMiwiZXhwIjoxNjc1NTkyNzAyfQ.SH3iVJHrCbARCUUaHwJNvWA7l8k6xQf_VYEpDEQ3Xv4",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZGU2NDQyZWVkY2FmYzIxMjk1NmZkOSIsImlhdCI6MTY3NTUzNTY2OSwiZXhwIjoxNjc1NjIyMDY5fQ.6ZvId65uMlVMBZ4hBlrNdUZT4J3L9BVz9L2SJzenFus",
 						"type": "default"
 					}
 				],
@@ -150,7 +150,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://hospitalapi-lflw.onrender.com/63de6a508515eb0eb2823e2f/all_reports",
+					"raw": "https://hospitalapi-lflw.onrender.com/patients/63de6a508515eb0eb2823e2f/all_reports",
 					"protocol": "https",
 					"host": [
 						"hospitalapi-lflw",
@@ -158,6 +158,7 @@
 						"com"
 					],
 					"path": [
+						"patients",
 						"63de6a508515eb0eb2823e2f",
 						"all_reports"
 					]
