@@ -2,20 +2,25 @@
 Tech Stack: Node.js &amp; Mongo DB
 
 There are 2 types of Users
-- Doctors
-- Patients
 
-- Doctors can log in
-- Each time a patient visits, the doctor will follow 2 steps
+    1.Doctors
+    2.Patients
+
+Doctors can log in
+
+Each time a patient visits, the doctor will follow 2 steps
+
     -- Register the patient in the app
     -- create a Report
 
-- Patient Report will have the following fields
+Patient Report will have the following fields
+
     -- Created by doctor
     -- Status Can be either of: [Negative, Travelled-Quarantine, Symptoms-Quarantine,Positive-Admit]
     -- Date
 
-- Available routes
+Available routes
+
     - /doctors/register → with username and password and return success msg response
     - /doctors/login → returns the JWT to be used on successful login
     - /patients/register → register with name and unique phoneNumber
