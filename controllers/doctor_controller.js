@@ -5,15 +5,19 @@ const { secret } = require("../config/jwt");
 // Register a new doctor
 exports.register = async (req, res) => {
     try {
-        const doctor = new Doctor({
+        let doctor = await Doctor.findOne({
+            username: req.body.username,
+            password: req.body.password
+        });
+        if (doctor)
+            return res.status(400).send({ error: "Doctor with this username already exists" });
+        doctor = new Doctor({
             username: req.body.username,
             password: req.body.password,
         });
         await doctor.save();
         res.status(201).send({ message: "Doctor registered successfully" });
     } catch (error) {
-        if (error.code === 11000)
-            return res.status(400).send({ error: "Doctor with this username already exists" });
         res.status(400).send({ error: error.message });
     }
 };
