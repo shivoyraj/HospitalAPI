@@ -15,7 +15,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n   \"username\": \"doc1\",\n   \"password\": \"doc1@abc\"\n}\n",
+					"raw": "{\n   \"username\": \"\",\n   \"password\": \"\"\n}\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -23,13 +23,12 @@
 					}
 				},
 				"url": {
-					"raw": "https://hospitalapi-lflw.onrender.com/doctors/register",
-					"protocol": "https",
+					"raw": "http://localhost:3000/doctors/register",
+					"protocol": "http",
 					"host": [
-						"hospitalapi-lflw",
-						"onrender",
-						"com"
+						"localhost"
 					],
+					"port": "3000",
 					"path": [
 						"doctors",
 						"register"
