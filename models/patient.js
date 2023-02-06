@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Report = require('./report');
 
+// patient schema with required name and phonenumber
 const patientSchema = new mongoose.Schema({
   name: {
     type: String,

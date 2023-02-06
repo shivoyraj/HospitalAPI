@@ -1,5 +1,6 @@
 const Patient = require('../models/patient');
 
+// for register patient if that already exists will simply return patient object
 exports.register = async (req, res) => {
   try {
     const { name, phoneNumber } = req.body;

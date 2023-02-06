@@ -1,6 +1,9 @@
 const Patient = require('../models/patient');
 const Report = require('../models/report');
 
+
+// create report of a patient on successfull it will return report object 
+// patient validation is handled
 exports.createReport = async (req, res) => {
     try {
         const { status } = req.body;
@@ -29,7 +32,7 @@ exports.createReport = async (req, res) => {
     }
 };
 
-
+// get all reports of a particular patient
 exports.getAllReports = async (req, res) => {
     try {
         const patient = await Patient.findById(req.params.id)
@@ -47,7 +50,7 @@ exports.getAllReports = async (req, res) => {
 };
 
 
-
+// get all reports of all patient with given status 
 exports.getReportsByStatus = (req, res) => {
     const status = req.params.status;
     Report.find({ status })

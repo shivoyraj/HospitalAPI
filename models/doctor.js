@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+// Doctor Schema with username and password
 const doctorSchema = new mongoose.Schema({
   username: {
     type: String,

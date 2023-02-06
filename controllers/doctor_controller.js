@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 const Doctor = require("../models/doctor");
 const { secret } = require("../config/jwt");
 
-// Register a new doctor
+// Register a new doctor with handing validations if already exists will throw response with code 400
 exports.register = async (req, res) => {
     try {
         let doctor = await Doctor.findOne({
@@ -22,7 +22,7 @@ exports.register = async (req, res) => {
     }
 };
 
-// Login a doctor
+// Login a doctor on successfull will return jwt token and also validation is handled
 exports.login = async (req, res) => {
     try {
         const doctor = await Doctor.findOne({

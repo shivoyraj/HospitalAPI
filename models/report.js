@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+//Report schema with required fields patient , status and date of creation
 const reportSchema = new mongoose.Schema({
     patient: {
         type: mongoose.Schema.Types.ObjectId,
