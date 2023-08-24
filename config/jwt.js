@@ -5,7 +5,7 @@ const secret = 'secretkey';
 
 // it will generate token
 const generateToken = (payload) => {
-  return jwt.sign(payload, secret, { expiresIn: '24h' });
+  return jwt.sign(payload, secret, { expiresIn: '30m' });
 };
 
 // it will verify token
